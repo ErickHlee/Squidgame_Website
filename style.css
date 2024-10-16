@@ -5,6 +5,155 @@
     O 'width' e 'height' são calculados desta maneira:display:
     > width = width + padding + border
     > height = height + padding + border
+
+    Ou seja, mesmo colocando `width: 300px` dentro do CSS, pode ser que o padding ou margin possa ser > 0. Por isso, temos o `box-sizing` para corrigir isso, que deixa as box com o mesmo tamanho.
     */
     box-sizing: border-box;
+    font-family: sans-serif;
 }
+
+body {
+    background: #000;
+    padding: 20px 100px;
+    overflow: hidden;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 
+    Pegando o primeiro elemento filho do elemento pai:
+        <a href="#">
+            <img src="src/Assets/nav-left.svg" alt=""> (este aqui vai ser pego)
+        </a>
+ */
+
+nav a:first-child img { 
+    width: 60px;
+}
+
+
+nav a:last-child img { /* Mesmo conceito do código passado */
+    width: 20px;
+}
+
+/* 
+    Já esse, pega o segundo elemento dentro do elemento Pai, neste caso:
+    > <a href="#">
+        <img src="src/Assets/logo-top.png" alt="">
+        <img src="src/Assets/logo-bottom.png" alt="">
+      </a>
+*/
+nav a:nth-of-type(2) { 
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    Cara, o vídeo mostrou uma coisa muito legal, as abreviações:
+    > w150px = width: 150px;
+    > mr20px = margin-right: 20px;
+*/
+
+nav a:nth-of-type(2) img { 
+    width: 150px;
+    margin-right: 20px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-img {
+    width: 352px;
+}
+
+.info {
+    margin-right: 120px;
+    margin-top: 50px;
+}
+
+.top-info, .bottom-info {
+    display: flex;
+    align-items: center;
+    /* Define o espaço entre os elementos e mum container que possui o `grid` ou `flex`.
+        > FLEX: define os espaços entre os elementos flexíveis, ou seja, 20px entre cada item.
+        > GRID: define o espaço entre a linha e a coluna da grade, ou seja, espalo entre cada linha e coluna do grid. */
+    gap: 20px;
+    width: 390px;
+    margin-bottom: 20px;
+}
+
+.info span { /* Mexendo no texto `Squid Game` */
+    font-size: 40px;
+    margin-top: 15px;
+    background: linear-gradient(19deg, #e93e7d, #fff);
+    /* Esses elementos `webkit` são específicas do navegador Safari, agora vamos ver o que eles fazem:
+    > -webkit-background-clip: define como o fundo de um elemento deve ser recortado, nesse caso, eu dei o valor de `text`, então os textos vão recortar o fundo. Ou seja, explicando bem mais claro, o fundo será visível onde o texto estiver.
+    > -webkit-text-fill-color: define a cor do texto de um elemento, já que usamos o texto como um meio de fundo, o `transparent` permite que o fundo seja visível. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-info img { /* Mexendo no quadro com máscara */
+    width: 90px;
+}
+
+.bottom-info img { /* Mexendo nos triangulos e quadrados */
+    width: 35px;
+    margin-bottom: 5px;
+}
+
+.info p {
+    color: aliceblue;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+footer { /* Mexendo a barra inteira */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #5e494928;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 25px 100px;
+}
+
+footer ul { /* Mexendo nos clicáveis do footer */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+footer ul li a, footer span:last-child {
+    text-decoration: none;
+    color: #7d7d7d;
+    font: size 12px;
+    transition: 0.3s; /* Precisa do hover para funcionar */
+}
+
+footer ul li a:hover {
+    color: #e93e7d;
+}
+
+footer span {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
