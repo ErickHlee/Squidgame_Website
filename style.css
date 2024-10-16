@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 
+    O 'width' e 'height' são calculados desta maneira:display:
+    > width = width + padding + border
+    > height = height + padding + border
+    */
+    box-sizing: border-box;
+}
