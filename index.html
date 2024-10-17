@@ -17,8 +17,8 @@
                 <img src="src/Assets/nav-left.svg" alt="">
             </a>
             <a href="#">
-                <img src="src/Assets/logo-top.png" alt="">
-                <img src="src/Assets/logo-bottom.png" alt="">
+                <img class="logo1" src="src/Assets/logo-top.png" alt="">
+                <img class="logo2" src="src/Assets/logo-bottom.png" alt="">
             </a>
             <a href="">
                 <img src="src/Assets/nav-right.svg" alt="">
@@ -52,10 +52,23 @@
         <span>Start New Game <i class="ri-play-fill"></i></span>
         <!-- Mais uma descoberta legal :D. Símbolo do copyright -->
         <span>Coryright &copy; 2024 synomous. All right reserved</span>
-     </footer>
+    </footer>
 
-     <span class="fade1"></span>
-     <span class="fade2"></span>
+    <!-- Uma bolinha roxo brilhante no canto -->
+    <span class="fade1"></span>
+    <span class="fade2"></span>
+
+    <!-- Biblioteca pega em: https://cdnjs.com/libraries/gsap -->
+    <!-- 
+    O que faz GSAP? 
+    gsap é uma biblioteca de animação de alta-performance, podendo animar em CSS, SVG, canvas, React, WebGL e muito mais. As suas principais função são:
+    > Animação suave
+    > Facilidade de Uso
+    > Compatibilidade: muitos navegadores são compatíveis com GSAP
+    > Controle de Sequência: construção de animação complexas com facilidade
+    > Desempenho
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 <script src="app.js"></script>
 </html>

@@ -153,7 +153,22 @@ footer span {
     cursor: pointer;
 }
 
+.fade1, .fade2 {
+    content: " ";
+    width: 70px;
+    height: 70px;
+    background: #e93e7d;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    filter: blur(40px);
+    z-index: -1;
+}
 
+.fade2 {
+    left: 1150px;
+    bottom: -50px;
+}
 
 
 
