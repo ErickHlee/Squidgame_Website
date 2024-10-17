@@ -27,7 +27,7 @@ t1.from(".hero-img", {
 });
 
 // Para pegar dois seletores tipo esse código abaixo, você precisa colocar `[]`
-t1.from([".top-info img", ".bottom-info p"], {
+t1.from([".top-info img", ".bottom-info img"], {
     scale: 0,
     opacity: 0
 });
@@ -37,5 +37,23 @@ t1.from(".top-info span", {
     opacity: 0,
     duration: 1
 });
+
+t1.from(".bottom-info p", {
+    x: 100,
+    opacity: 0,
+    duration: 1.2
+});
+
+t1.from("nav a:first-child", {
+    y: -50,
+    opacity: 0,
+    duration: 1.2
+})
+
+t1.from("nav a:last-child", {
+    y: -50,
+    opacity: 0,
+    duration: 1.2
+})
 
 
